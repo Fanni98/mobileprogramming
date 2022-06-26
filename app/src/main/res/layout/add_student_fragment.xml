@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="115dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="42dp"
+        android:contentDescription="imageMain"
+        android:src="@drawable/tutorapp2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newStudent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/birthDate"
+        android:layout_width="318dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="46dp"
+        android:text="Születési dátum kiválasztása"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthDateValue"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+           android:id="@+id/name"
+           android:layout_width="329dp"
+           android:layout_height="48dp"
+           android:layout_marginStart="40dp"
+           android:layout_marginTop="21dp"
+           android:layout_marginEnd="42dp"
+           android:ems="10"
+           android:hint="Név"
+           android:inputType="text"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+       <TextView
+           android:id="@+id/newStudent"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="40dp"
+           android:layout_marginTop="99dp"
+           android:layout_marginBottom="110dp"
+           android:hint="Új hallgató"
+           android:textAppearance="@style/TextAppearance.AppCompat.Large"
+           app:layout_constraintBottom_toTopOf="@+id/name"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <Button
+           android:id="@+id/submitButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="156dp"
+           android:layout_marginEnd="161dp"
+           android:layout_marginBottom="56dp"
+           android:text="Hozzáadás"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.447"
+           app:layout_constraintStart_toStartOf="parent" />
+
+       <TextView
+           android:id="@+id/birthDateLabel"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="42dp"
+           android:layout_marginTop="43dp"
+           android:layout_marginEnd="241dp"
+           android:text="Születési dátum"
+           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/birthDateValue"
+        android:layout_width="320dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="49dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthDateLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

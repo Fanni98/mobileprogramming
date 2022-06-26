@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/add_course_fragment.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/add_student_fragment.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/course_data_fragment.xml" value="0.18" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/course_data_update_fragment.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/course_fragment.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/list_course.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/list_student.xml" value="0.2" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/student_data_fragment.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/student_fragment.xml" value="0.1" />
+        <entry key="..\:/MOBILPROGI/TutorApp (2)/TutorApp/app/src/main/res/layout/tutor_main_fragment.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tutorMainFragment">
+    <fragment
+        android:id="@+id/AddCourseFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.AddCourseFragment"
+        android:label="Kurzus felvitele"
+        tools:layout="@layout/add_course_fragment"
+        >
+        <action
+            android:id="@+id/action_AddCourseFragment_to_CourseFragment"
+            app:destination="@id/CourseFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CourseFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.CourseFragment"
+        android:label="Kurzusok"
+        tools:layout="@layout/course_fragment"
+        >
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            />
+        <argument
+            android:name="course"
+            app:argType="hu.unimiskolc.iit.core.domain.Course" />
+        <action
+            android:id="@+id/action_CourseFragment_to_courseDataFragment"
+            app:destination="@id/courseDataFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AddStudentFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.AddStudentFragment"
+        android:label="Hallgató felvétele"
+        tools:layout="@layout/add_student_fragment"
+        >
+        <argument
+            android:name="course"
+            app:argType="hu.unimiskolc.iit.core.domain.Course" />
+        <argument
+            android:name="neptunId"
+            app:argType="integer"
+            />
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_AddStudentFragment_to_courseDataFragment"
+            app:destination="@id/courseDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseDataFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.CourseDataFragment"
+        android:label="Kurzus adatok"
+        tools:layout="@layout/course_data_fragment"
+        >
+        <argument
+            android:name="course"
+            app:argType="hu.unimiskolc.iit.core.domain.Course" />
+        <argument
+            android:name="neptunId"
+            app:argType="integer"
+            />
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_courseDataFragment_to_AddStudentFragment"
+            app:destination="@id/AddStudentFragment" />
+        <action
+            android:id="@+id/action_courseDataFragment_to_studentDataFragment"
+            app:destination="@id/studentDataFragment" />
+        <action
+            android:id="@+id/action_courseDataFragment_to_courseDataUpdateFragment"
+            app:destination="@id/courseDataUpdateFragment" />
+        <action
+            android:id="@+id/action_courseDataFragment_to_tutorMainFragment"
+            app:destination="@id/tutorMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorMainFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.TutorMainFragment"
+        android:label="Tutor App"
+        tools:layout="@layout/tutor_main_fragment">
+        <action
+            android:id="@+id/action_tutorMainFragment_to_AddCourseFragment"
+            app:destination="@id/AddCourseFragment" />
+        <action
+            android:id="@+id/action_tutorMainFragment_to_CourseFragment"
+            app:destination="@id/CourseFragment" />
+        <action
+            android:id="@+id/action_tutorMainFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.StudentFragment"
+        android:label="Névsor" >
+        <argument
+            android:name="neptunId"
+            app:argType="integer"
+            />
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_studentFragment_to_studentDataFragment"
+            app:destination="@id/studentDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentDataFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.StudentDataFragment"
+        android:label="Hallgató adatai" >
+        <argument
+            android:name="neptunId"
+            app:argType="integer"
+            />
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_studentDataFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+        <action
+            android:id="@+id/action_studentDataFragment_to_tutorMainFragment"
+            app:destination="@id/tutorMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/courseDataUpdateFragment"
+        android:name="hu.unimiskolc.iit.tutorapp.fragment.CourseDataUpdateFragment"
+        android:label="Kurzus módosítása" >
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            />
+        <action
+            android:id="@+id/action_courseDataUpdateFragment_to_courseDataFragment"
+            app:destination="@id/courseDataFragment" />
+        <action
+            android:id="@+id/action_courseDataUpdateFragment_to_AddStudentFragment"
+            app:destination="@id/AddStudentFragment" />
+    </fragment>
+</navigation>
